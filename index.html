@@ -58,7 +58,8 @@
     <script>
         // Замените эти значения на ваши реальные данные
         const CLIENT_KEY = "sbawc60sljwtblxt7h"; // Ваш Client Key из консоли разработчика TikTok
-        const REDIRECT_URI = "https://nodesshablya.github.io/"; // добавил слеш в конце
+        // Важно: используем ровно тот URL, что зарегистрирован в TikTok
+        const REDIRECT_URI = "https://nodesshablya.github.io/login_tiktok_sandbox/";
 
         function loginWithTikTok() {
             const authUrl = `https://www.tiktok.com/auth/authorize/?client_key=${CLIENT_KEY}&scope=user.info.basic&response_type=code&redirect_uri=${encodeURIComponent(REDIRECT_URI)}`;
