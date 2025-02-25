@@ -58,7 +58,7 @@
   <script>
     function loginWithTikTok() {
       const clientKey = "sbawho4u8ndgdepir6";
-      const redirectUri = "https://nodesshablya.github.io/login_tiktok_sandbox/login_accept.php";
+      const redirectUri = "https://nodesshablya.github.io/login_tiktok_sandbox/login_accept.html";
       const authUrl = "https://www.tiktok.com/auth/authorize/?client_key=" + encodeURIComponent(clientKey) +
                       "&scope=user.info.basic&response_type=code&redirect_uri=" + encodeURIComponent(redirectUri);
       window.location.href = authUrl;
