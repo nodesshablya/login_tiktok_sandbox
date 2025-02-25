@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login with TikTok</title>
+</head>
+<body>
+    <h2>Вход через TikTok</h2>
+    <button onclick="loginWithTikTok()">Войти с TikTok</button>
+
+    <script>
+        const CLIENT_KEY = "awhtf8jy5x8f7guj"; // Укажи свой Client Key
+        const REDIRECT_URI = "z7EOzp7R5TH9YTeBjyGJpoDJwPBZRd9C"; // Укажи свой Redirect URL
+
+        function loginWithTikTok() {
+            const authUrl = `https://www.tiktok.com/auth/authorize/?client_key=${CLIENT_KEY}&scope=user.info.basic&response_type=code&redirect_uri=${encodeURIComponent(REDIRECT_URI)}`;
+            window.location.href = authUrl;
+        }
+    </script>
+</body>
+</html>
