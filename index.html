@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вход через TikTok</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      text-align: center;
+      background-color: #f8f8f8;
+    }
+    h2 {
+      color: #333;
+      margin-bottom: 30px;
+    }
+    button {
+      background-color: #fe2c55;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #e62a4d;
+    }
+    .info {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #666;
+      text-align: left;
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 4px;
+      border-left: 3px solid #fe2c55;
+    }
+  </style>
+</head>
+<body>
+  <h2>Вход через TikTok</h2>
+  <button onclick="loginWithTikTok()">Войти с TikTok</button>
+  
+  <div class="info">
+    <p><strong>Важно:</strong> Перед использованием этого кода вам необходимо:</p>
+    <ol>
+      <li>Зарегистрировать приложение в <a href="https://developers.tiktok.com/" target="_blank">консоли разработчика TikTok</a></li>
+      <li>Получить Client Key для вашего приложения</li>
+      <li>Зарегистрировать допустимый URL перенаправления</li>
+    </ol>
+  </div>
+
+  <script>
+    function loginWithTikTok() {
+      const clientKey = "sbawho4u8ndgdepir6";
+      const redirectUri = "https://nodesshablya.github.io/login_tiktok_sandbox/login_accept.php";
+      const authUrl = "https://www.tiktok.com/auth/authorize/?client_key=" + encodeURIComponent(clientKey) +
+                      "&scope=user.info.basic&response_type=code&redirect_uri=" + encodeURIComponent(redirectUri);
+      window.location.href = authUrl;
+    }
+  </script>
+</body>
+</html>
