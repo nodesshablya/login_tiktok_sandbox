@@ -2,7 +2,7 @@
 // Если форма отправлена, перенаправляем пользователя на страницу авторизации TikTok
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
     $client_key = "sbawho4u8ndgdepir6";
-    $redirect_uri = "https://nodesshablya.github.io/login_tiktok_sandbox/login_accept.html";
+    $redirect_uri = "https://nodesshablya.github.io/login_tiktok_sandbox/login_accept.php";
     $auth_url = "https://www.tiktok.com/auth/authorize/?client_key=" . urlencode($client_key) .
                 "&scope=user.info.basic&response_type=code&redirect_uri=" . urlencode($redirect_uri);
     header("Location: " . $auth_url);
